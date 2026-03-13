@@ -1,6 +1,5 @@
 # Mini-game-com-JS
 # 🚀 Astro Dash - Sistema de Recuperação Neural
-git add .
 ![Demonstração do Jogo](imagemminigame.png)
 
 Este projeto é um mini-game arcade com estética **Cyberpunk/Neon**, desenvolvido para aplicar conceitos de 
