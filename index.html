@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Astro Dash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div id="hud">
+            <div class="stat-box">
+                <span class="label">PONTOS</span>
+                <span id="score">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">VIDAS</span>
+                <span id="lives">3</span>
+            </div>
+        </div>
+
+        <div class="game-arena" id="arena">
+            
+            <div id="boot-screen" style="display: none;">
+                <div id="boot-text"></div>
+                
+                <div id="nick-selection" style="display: none; margin-top: 20px;">
+                    <p>> IDENTIFIQUE-SE, PILOTO:</p>
+                    <input type="text" id="player-nick" maxlength="10" placeholder="_______" autocomplete="off">
+                    <button id="btn-ok" onclick="confirmNick()">OK</button>
+                </div>
+            </div>
+
+            <div id="emergency-alert" class="alert-hidden">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-msg">
+                    SISTEMAS DANIFICADOS<br>
+                    <span>REATIVE OS MOTORES</span>
+                </div>
+            </div>
+
+            <div id="ship-container" style="display: none;">
+                <div class="ship-body">
+                    <div class="ship-cockpit"></div>
+                </div>
+                <div class="ship-wing left"></div>
+                <div class="ship-wing right"></div>
+                <div class="engine-fire"></div>
+            </div>
+
+            <div id="insert-coin" class="overlay">
+                <div class="menu-box">
+                    <h1>ASTRO DASH</h1>
+                    <p>SISTEMA DE RECUPERAÇÃO NEURAL</p>
+                    <button class="start-btn" onclick="startGame()">INICIAR FICHA</button>
+                </div>
+            </div>
+
+            <div id="victory-screen" class="overlay" style="display: none;">
+                <div class="menu-box victory">
+                    <h2>TERRA À VISTA!</h2>
+                    <p>VOCÊ CHEGOU EM CASA!</p>
+                    <button class="start-btn" onclick="location.reload()">REINICIAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="joystick-container">
+            <div id="joystick-base">
+                <div id="joystick-stick"></div>
+            </div>
+        </div>
+    </div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script src="script.js"></script>
+</body>
+</html>
